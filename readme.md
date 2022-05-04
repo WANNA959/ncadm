@@ -75,7 +75,7 @@ $ ./ncadm --ip 101.43.253.110 get-token --bootstrap-token=33df5c33f42f4960 --net
 
 ------------------------------------------------
 network-controller:
-    node-token: 
+    node-token: 33df5c33f42f4960
     NetworkServerIp: 101.43.253.110
     NetworkServerPort: 6441
     GrpcServerIp: 10.1.1.1

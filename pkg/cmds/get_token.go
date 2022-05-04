@@ -16,7 +16,7 @@ import (
 var gettokenTemplate = template.Must(template.New("network-controller GetToken").Parse(`
 ------------------------------------------------
 network-controller:
-    node-token: {{.NodeToken}}
+    BootstrapToken: {{.BootstrapToken}}
     NetworkServerIp: {{.NetworkServerIp}}
     NetworkServerPort: {{.NetworkServerPort}}
     GrpcServerIp: {{.GrpcServerIp}}
@@ -81,7 +81,7 @@ func getToken(ctx *cli.Context) error {
 	certutil.WriteKey(filepath.Join(networkCertsDir, contant.ClientKeyFile), keyBytes)
 
 	data := struct {
-		NodeToken         string
+		BootstrapToken    string
 		NetworkServerIp   string
 		NetworkServerPort string
 		GrpcServerIp      string
@@ -89,7 +89,7 @@ func getToken(ctx *cli.Context) error {
 		NetworkCertsDir   string
 		GrpcCertsDir      string
 	}{
-		NodeToken:         nodeToken,
+		BootstrapToken:    bootstrapToken,
 		NetworkServerIp:   resp.NetworkServerIp,
 		NetworkServerPort: resp.NetworkServerPort,
 		GrpcServerIp:      resp.GrpcServerIp,
