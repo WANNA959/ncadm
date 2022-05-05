@@ -35,10 +35,12 @@ func checkHealth(ctx *cli.Context) error {
 
 	req := &pb_gen.HealthCheckRequest{}
 	backCtx := context.Background()
+
 	ctrlResp, err := client.GClient.C.HealthCheck(backCtx, req)
 	if err != nil {
 		return err
 	}
+
 	bootResp, err := client.BootstrapClient.BootstrapC.HealthCheck(backCtx, req)
 	if err != nil {
 		return err

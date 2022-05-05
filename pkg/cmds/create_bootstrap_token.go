@@ -47,6 +47,8 @@ func createBootstrapToken(ctx *cli.Context) error {
 	resp, err := client.GClient.C.GetBootStrapToken(context.Background(), req)
 	if err != nil {
 		return err
+	} else if resp.Code != "200" {
+		return errors.New(resp.Message)
 	}
 
 	var expireMsg string

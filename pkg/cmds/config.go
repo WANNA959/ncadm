@@ -29,7 +29,6 @@ func NewClient() *Client {
 			BootstrapPort: GlobalConfig.bootStrapPort,
 		},
 	}
-
 	// init grpc client
 	if err := client.GClient.InitGrpcClientConn(); err != nil {
 		panic(err)

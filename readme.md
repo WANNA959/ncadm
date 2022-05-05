@@ -35,9 +35,9 @@ GLOBAL OPTIONS:
    --ip value        leader host ip (default: "127.0.0.1")
    --port value      network grpc control port (default: "6440")
    --bootport value  network grpc bootstrap control port (default: "6439")
-   --cacert value    ca cert filepath of network grpc server (default: "/root/nc/certs/grpc/ca.pem")
-   --cert value      client cert filepath of network grpc server (default: "/root/nc/certs/grpc/client.pem")
-   --key value       client key filepath of network grpc server (default: "/root/nc/certs/grpc/client-key.pem")
+   --cacert value    ca cert filepath of network grpc server (default: "/root/.litekube/nc/certs/grpc/ca.pem")
+   --cert value      client cert filepath of network grpc server (default: "/root/.litekube/nc/certs/grpc/client.pem")
+   --key value       client key filepath of network grpc server (default: "/root/.litekube/nc/certs/grpc/client-key.pem")
    --help, -h        show help (default: false)
    --version, -v     print the version (default: false)
 ```

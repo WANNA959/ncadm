@@ -45,6 +45,8 @@ func unregister(ctx *cli.Context) error {
 	resp, err := client.GClient.C.UnRegister(context.Background(), req)
 	if err != nil {
 		return err
+	} else if resp.Code != "200" {
+		return errors.New(resp.Message)
 	}
 
 	data := struct {

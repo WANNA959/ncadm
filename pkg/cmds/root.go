@@ -61,19 +61,19 @@ func NewApp() *cli.App {
 			Name:        "cacert",
 			Usage:       "ca cert filepath of network grpc server",
 			Destination: &GlobalConfig.CAFile,
-			Value:       filepath.Join(homeDir, "nc/certs/grpc/ca.pem"),
+			Value:       filepath.Join(homeDir, ".litekube/nc/certs/grpc/ca.pem"),
 		},
 		&cli.StringFlag{
 			Name:        "cert",
 			Usage:       "client cert filepath of network grpc server",
 			Destination: &GlobalConfig.CertFile,
-			Value:       filepath.Join(homeDir, "nc/certs/grpc/client.pem"),
+			Value:       filepath.Join(homeDir, ".litekube/nc/certs/grpc/client.pem"),
 		},
 		&cli.StringFlag{
 			Name:        "key",
 			Usage:       "client key filepath of network grpc server",
 			Destination: &GlobalConfig.KeyFile,
-			Value:       filepath.Join(homeDir, "nc/certs/grpc/client-key.pem"),
+			Value:       filepath.Join(homeDir, ".litekube/nc/certs/grpc/client-key.pem"),
 		},
 	}
 
